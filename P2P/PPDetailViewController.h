@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PPDetailViewController : UIViewController
-
+@property(nonatomic, strong) NSString *href;
+@property(nonatomic, strong) NSString *titleString;
+@property(nonatomic, strong) NSString *cdate;
+@property(nonatomic, strong) NSString *hotString;
+@property(nonatomic, strong) NSString *sizeString;
 @end

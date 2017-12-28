@@ -11,7 +11,7 @@
 #import "PPDispatch.h"
 #import "PPItemCell.h"
 #import <UITableView+FDTemplateLayoutCell.h>
-
+#import "PPDetailViewController.h"
 
 
 
@@ -32,7 +32,11 @@ static void callback(NSArray *args, NSString *return_id) { }
     
     UINib *nib = [UINib nibWithNibName:@"PPItemCell" bundle:nil];
     [_mainTableView registerNib:nib forCellReuseIdentifier:@"PPItemCell"];
-    
+    [PPDispatch dataBy:@"归来" page:@"1" handle:^(id data, BOOL finish) {
+        if (finish) {
+            [self setDataList:(NSMutableArray *)data];
+        }
+    }];
     /*
     // Do any additional setup after loading the view, typically from a nib.
     // makes JXcore instance running under it's own thread
@@ -90,6 +94,12 @@ static void callback(NSArray *args, NSString *return_id) { }
      */
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)setDataList:(NSMutableArray *)data
 {
     itemList = data;
@@ -125,6 +135,20 @@ static void callback(NSArray *args, NSString *return_id) { }
         // 配置 cell 的数据源，和 "cellForRow" 干的事一致，比如：
         [cell setItem:itemList[indexPath.row]];
     }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UIStoryboard *storyboard=self.storyboard;
+    
+    PPDetailViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"PPDetailViewController"];
+    detail.href = ((PPMediaItem *)itemList[indexPath.row]).href;
+    detail.titleString = ((PPMediaItem *)itemList[indexPath.row]).name;
+    detail.cdate = ((PPMediaItem *)itemList[indexPath.row]).cdate;
+    detail.hotString = ((PPMediaItem *)itemList[indexPath.row]).hot;
+    detail.sizeString = ((PPMediaItem *)itemList[indexPath.row]).size;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 #pragma mark UISearchBarDelegate

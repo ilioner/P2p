@@ -9,6 +9,7 @@
 #import "PPDispatch.h"
 #import "PPPageParse.h"
 #import "PPRequest.h"
+#import "PPDetailRequest.h"
 
 @implementation PPDispatch
 
@@ -25,7 +26,7 @@
         if (request){
             //NSLog(@"%@",request.responseString);
             NSString *htmlString = request.responseString;
-            [PPPageParse parse:htmlString keywords:keywords handle:^(id data, BOOL finish) {
+            [PPPageParse parse:htmlString handle:^(id data, BOOL finish) {
                 dispatch(data,finish);
             }];
         }
@@ -36,6 +37,26 @@
         }
     }];
     return NULL;
+}
+
++ (void)detailBy:(NSString *)url handle:(dispatch)dispatch
+{
+    PPDetailRequest *request = [[PPDetailRequest alloc] initWith:url];
+    
+    [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        if (request){
+            //NSLog(@"%@",request.responseString);
+            NSString *htmlString = request.responseString;
+            [PPPageParse parseDetail:htmlString handle:^(id data, BOOL finish) {
+                dispatch(data,finish);
+            }];
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        if (request){
+            //NSLog(@"%@",request.error);
+            dispatch(NULL,NO);
+        }
+    }];
 }
 
 @end

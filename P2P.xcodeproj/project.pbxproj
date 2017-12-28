@@ -11,6 +11,8 @@
 		9C07CC3F1FF3957E008DB6F6 /* PPItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C07CC3D1FF3957E008DB6F6 /* PPItemCell.m */; };
 		9C07CC401FF3957E008DB6F6 /* PPItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C07CC3E1FF3957E008DB6F6 /* PPItemCell.xib */; };
 		9C5E2CC51FF4A04200D76C71 /* PPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */; };
+		9C5E2CC81FF4BF3A00D76C71 /* PPDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E2CC61FF4BF3900D76C71 /* PPDetailRequest.m */; };
+		9C5E2CCB1FF4C4DC00D76C71 /* PPDetailMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E2CC91FF4C4DC00D76C71 /* PPDetailMediaItem.m */; };
 		9CB51C6C1FF22335008AA0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C6B1FF22335008AA0DD /* AppDelegate.m */; };
 		9CB51C6F1FF22335008AA0DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C6E1FF22335008AA0DD /* ViewController.m */; };
 		9CB51C721FF22335008AA0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB51C701FF22335008AA0DD /* Main.storyboard */; };
@@ -47,6 +49,10 @@
 		9C07CC3E1FF3957E008DB6F6 /* PPItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPItemCell.xib; sourceTree = "<group>"; };
 		9C5E2CC31FF4A04200D76C71 /* PPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDetailViewController.h; sourceTree = "<group>"; };
 		9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPDetailViewController.m; sourceTree = "<group>"; };
+		9C5E2CC61FF4BF3900D76C71 /* PPDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDetailRequest.m; sourceTree = "<group>"; };
+		9C5E2CC71FF4BF3A00D76C71 /* PPDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDetailRequest.h; sourceTree = "<group>"; };
+		9C5E2CC91FF4C4DC00D76C71 /* PPDetailMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDetailMediaItem.m; sourceTree = "<group>"; };
+		9C5E2CCA1FF4C4DC00D76C71 /* PPDetailMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDetailMediaItem.h; sourceTree = "<group>"; };
 		9CB51C671FF22335008AA0DD /* P2P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2P.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB51C6A1FF22335008AA0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CB51C6B1FF22335008AA0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 		9C07CC381FF38248008DB6F6 /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				9C5E2CCA1FF4C4DC00D76C71 /* PPDetailMediaItem.h */,
+				9C5E2CC91FF4C4DC00D76C71 /* PPDetailMediaItem.m */,
 				9C07CC391FF38315008DB6F6 /* PPMediaItem.h */,
 				9C07CC3A1FF38315008DB6F6 /* PPMediaItem.m */,
 			);
@@ -210,6 +218,8 @@
 		9CB51CA51FF2370F008AA0DD /* Scrapy */ = {
 			isa = PBXGroup;
 			children = (
+				9C5E2CC71FF4BF3A00D76C71 /* PPDetailRequest.h */,
+				9C5E2CC61FF4BF3900D76C71 /* PPDetailRequest.m */,
 				9CB51CA61FF23958008AA0DD /* PPDispatch.h */,
 				9CB51CA71FF23958008AA0DD /* PPDispatch.m */,
 				9CB51CA91FF23978008AA0DD /* PPPageParse.h */,
@@ -347,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5E2CCB1FF4C4DC00D76C71 /* PPDetailMediaItem.m in Sources */,
 				9CB51C6F1FF22335008AA0DD /* ViewController.m in Sources */,
 				9C07CC3F1FF3957E008DB6F6 /* PPItemCell.m in Sources */,
 				9CB51C7A1FF22335008AA0DD /* main.m in Sources */,
@@ -355,6 +366,7 @@
 				9CB51CAB1FF23978008AA0DD /* PPPageParse.m in Sources */,
 				9CB51C6C1FF22335008AA0DD /* AppDelegate.m in Sources */,
 				9C5E2CC51FF4A04200D76C71 /* PPDetailViewController.m in Sources */,
+				9C5E2CC81FF4BF3A00D76C71 /* PPDetailRequest.m in Sources */,
 				9CB51CAE1FF23988008AA0DD /* PPRequest.m in Sources */,
 				9C07CC3B1FF38315008DB6F6 /* PPMediaItem.m in Sources */,
 			);

@@ -10,6 +10,6 @@
 typedef void(^parsehandle)(id data,BOOL finish);
 @interface PPPageParse : NSObject
 
-+(id)parse:(NSString *)pageString keywords:(NSString *)keywords handle:(parsehandle)handle;
-
++(id)parse:(NSString *)pageString handle:(parsehandle)handle;
++(id)parseDetail:(NSString *)pageString handle:(parsehandle)handle;
 @end

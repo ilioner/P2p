@@ -14,4 +14,5 @@ typedef void(^dispatch)(id data,BOOL finish);
 
 +(id)dataBy:(NSString *)keywords page:(NSString *)page handle:(dispatch)dispatch;
 
++(void)detailBy:(NSString *)url handle:(dispatch)dispatch;
 @end

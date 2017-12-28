@@ -9,10 +9,11 @@
 #import "PPPageParse.h"
 #import <Ono/Ono.h>
 #import "PPMediaItem.h"
+#import "PPDetailMediaItem.h"
 
 @implementation PPPageParse
 
-+(id)parse:(NSString *)pageString keywords:(NSString *)keywords handle:(parsehandle)handle
++(id)parse:(NSString *)pageString handle:(parsehandle)handle
 {
     NSData *data = [pageString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
@@ -66,6 +67,25 @@
         }
         
     }];
+    
+    return nil;
+}
+
++(id)parseDetail:(NSString *)pageString handle:(parsehandle)handle
+{
+    
+    PPDetailMediaItem *detailItem = [PPDetailMediaItem new];
+    
+    NSData *data = [pageString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    ONOXMLDocument *document = [ONOXMLDocument XMLDocumentWithData:data error:&error];
+    
+    NSString *magentPath = @"//*[@id='magnetLink']";
+    ONOXMLElement * magentELement = [document firstChildWithXPath:magentPath];
+    NSString *magentString = magentELement.stringValue;
+    
+    detailItem.magent = magentString;
+    handle(detailItem,YES);
     
     return nil;
 }
