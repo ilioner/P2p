@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C07CC3B1FF38315008DB6F6 /* PPMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C07CC3A1FF38315008DB6F6 /* PPMediaItem.m */; };
+		9C07CC3F1FF3957E008DB6F6 /* PPItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C07CC3D1FF3957E008DB6F6 /* PPItemCell.m */; };
+		9C07CC401FF3957E008DB6F6 /* PPItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C07CC3E1FF3957E008DB6F6 /* PPItemCell.xib */; };
+		9C5E2CC51FF4A04200D76C71 /* PPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */; };
 		9CB51C6C1FF22335008AA0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C6B1FF22335008AA0DD /* AppDelegate.m */; };
 		9CB51C6F1FF22335008AA0DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51C6E1FF22335008AA0DD /* ViewController.m */; };
 		9CB51C721FF22335008AA0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB51C701FF22335008AA0DD /* Main.storyboard */; };
@@ -27,12 +31,22 @@
 		9CB51CA11FF2269F008AA0DD /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB51C941FF2269F008AA0DD /* libsqlite3.a */; };
 		9CB51CA21FF2269F008AA0DD /* libleveldown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB51C951FF2269F008AA0DD /* libleveldown.a */; };
 		9CB51CA41FF2272E008AA0DD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB51CA31FF2272E008AA0DD /* libstdc++.6.0.9.tbd */; };
+		9CB51CA81FF23958008AA0DD /* PPDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CA71FF23958008AA0DD /* PPDispatch.m */; };
+		9CB51CAB1FF23978008AA0DD /* PPPageParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CAA1FF23978008AA0DD /* PPPageParse.m */; };
+		9CB51CAE1FF23988008AA0DD /* PPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CAD1FF23988008AA0DD /* PPRequest.m */; };
 		E08B7DD237D6A448B22CAAB5 /* libPods-P2P.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA21F68F5404ABAF4C9CFD2 /* libPods-P2P.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17C6A727891F7B992CDB0EA3 /* Pods-P2P.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2P.release.xcconfig"; path = "Pods/Target Support Files/Pods-P2P/Pods-P2P.release.xcconfig"; sourceTree = "<group>"; };
 		34B482127E3B220CC19C8AC0 /* Pods-P2P.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2P.debug.xcconfig"; path = "Pods/Target Support Files/Pods-P2P/Pods-P2P.debug.xcconfig"; sourceTree = "<group>"; };
+		9C07CC391FF38315008DB6F6 /* PPMediaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMediaItem.h; sourceTree = "<group>"; };
+		9C07CC3A1FF38315008DB6F6 /* PPMediaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMediaItem.m; sourceTree = "<group>"; };
+		9C07CC3C1FF3957E008DB6F6 /* PPItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPItemCell.h; sourceTree = "<group>"; };
+		9C07CC3D1FF3957E008DB6F6 /* PPItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPItemCell.m; sourceTree = "<group>"; };
+		9C07CC3E1FF3957E008DB6F6 /* PPItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPItemCell.xib; sourceTree = "<group>"; };
+		9C5E2CC31FF4A04200D76C71 /* PPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDetailViewController.h; sourceTree = "<group>"; };
+		9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPDetailViewController.m; sourceTree = "<group>"; };
 		9CB51C671FF22335008AA0DD /* P2P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2P.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB51C6A1FF22335008AA0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CB51C6B1FF22335008AA0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +74,12 @@
 		9CB51C951FF2269F008AA0DD /* libleveldown.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleveldown.a; sourceTree = "<group>"; };
 		9CB51C961FF2269F008AA0DD /* JXcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXcore.h; sourceTree = "<group>"; };
 		9CB51CA31FF2272E008AA0DD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		9CB51CA61FF23958008AA0DD /* PPDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDispatch.h; sourceTree = "<group>"; };
+		9CB51CA71FF23958008AA0DD /* PPDispatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPDispatch.m; sourceTree = "<group>"; };
+		9CB51CA91FF23978008AA0DD /* PPPageParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPPageParse.h; sourceTree = "<group>"; };
+		9CB51CAA1FF23978008AA0DD /* PPPageParse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPageParse.m; sourceTree = "<group>"; };
+		9CB51CAC1FF23988008AA0DD /* PPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRequest.h; sourceTree = "<group>"; };
+		9CB51CAD1FF23988008AA0DD /* PPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPRequest.m; sourceTree = "<group>"; };
 		FDA21F68F5404ABAF4C9CFD2 /* libPods-P2P.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-P2P.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +125,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9C07CC381FF38248008DB6F6 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				9C07CC391FF38315008DB6F6 /* PPMediaItem.h */,
+				9C07CC3A1FF38315008DB6F6 /* PPMediaItem.m */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
 		9CB51C5E1FF22334008AA0DD = {
 			isa = PBXGroup;
 			children = (
@@ -126,17 +155,24 @@
 		9CB51C691FF22335008AA0DD /* P2P */ = {
 			isa = PBXGroup;
 			children = (
+				9C07CC381FF38248008DB6F6 /* Dto */,
+				9CB51CA51FF2370F008AA0DD /* Scrapy */,
 				9CB51C861FF2269F008AA0DD /* JXcore */,
 				9CB51C821FF2265A008AA0DD /* JS */,
 				9CB51C6A1FF22335008AA0DD /* AppDelegate.h */,
 				9CB51C6B1FF22335008AA0DD /* AppDelegate.m */,
 				9CB51C6D1FF22335008AA0DD /* ViewController.h */,
 				9CB51C6E1FF22335008AA0DD /* ViewController.m */,
+				9C07CC3C1FF3957E008DB6F6 /* PPItemCell.h */,
+				9C07CC3D1FF3957E008DB6F6 /* PPItemCell.m */,
+				9C07CC3E1FF3957E008DB6F6 /* PPItemCell.xib */,
 				9CB51C701FF22335008AA0DD /* Main.storyboard */,
 				9CB51C731FF22335008AA0DD /* Assets.xcassets */,
 				9CB51C751FF22335008AA0DD /* LaunchScreen.storyboard */,
 				9CB51C781FF22335008AA0DD /* Info.plist */,
 				9CB51C791FF22335008AA0DD /* main.m */,
+				9C5E2CC31FF4A04200D76C71 /* PPDetailViewController.h */,
+				9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */,
 			);
 			path = P2P;
 			sourceTree = "<group>";
@@ -169,6 +205,19 @@
 				9CB51C951FF2269F008AA0DD /* libleveldown.a */,
 			);
 			path = bin;
+			sourceTree = "<group>";
+		};
+		9CB51CA51FF2370F008AA0DD /* Scrapy */ = {
+			isa = PBXGroup;
+			children = (
+				9CB51CA61FF23958008AA0DD /* PPDispatch.h */,
+				9CB51CA71FF23958008AA0DD /* PPDispatch.m */,
+				9CB51CA91FF23978008AA0DD /* PPPageParse.h */,
+				9CB51CAA1FF23978008AA0DD /* PPPageParse.m */,
+				9CB51CAC1FF23988008AA0DD /* PPRequest.h */,
+				9CB51CAD1FF23988008AA0DD /* PPRequest.m */,
+			);
+			path = Scrapy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +254,7 @@
 				TargetAttributes = {
 					9CB51C661FF22335008AA0DD = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -233,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB51C831FF2265A008AA0DD /* JS in Resources */,
+				9C07CC401FF3957E008DB6F6 /* PPItemCell.xib in Resources */,
 				9CB51C771FF22335008AA0DD /* LaunchScreen.storyboard in Resources */,
 				9CB51C741FF22335008AA0DD /* Assets.xcassets in Resources */,
 				9CB51C721FF22335008AA0DD /* Main.storyboard in Resources */,
@@ -298,9 +348,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB51C6F1FF22335008AA0DD /* ViewController.m in Sources */,
+				9C07CC3F1FF3957E008DB6F6 /* PPItemCell.m in Sources */,
 				9CB51C7A1FF22335008AA0DD /* main.m in Sources */,
 				9CB51C971FF2269F008AA0DD /* JXcore.m in Sources */,
+				9CB51CA81FF23958008AA0DD /* PPDispatch.m in Sources */,
+				9CB51CAB1FF23978008AA0DD /* PPPageParse.m in Sources */,
 				9CB51C6C1FF22335008AA0DD /* AppDelegate.m in Sources */,
+				9C5E2CC51FF4A04200D76C71 /* PPDetailViewController.m in Sources */,
+				9CB51CAE1FF23988008AA0DD /* PPRequest.m in Sources */,
+				9C07CC3B1FF38315008DB6F6 /* PPMediaItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +491,10 @@
 			baseConfigurationReference = 34B482127E3B220CC19C8AC0 /* Pods-P2P.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G2BS3FU3MZ;
 				INFOPLIST_FILE = P2P/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +502,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tywin.app.P2P;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e85ef0c-dc75-41ba-95b1-45fbf9d0dacb";
+				PROVISIONING_PROFILE_SPECIFIER = ailidemo_all;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,8 +513,10 @@
 			baseConfigurationReference = 17C6A727891F7B992CDB0EA3 /* Pods-P2P.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G2BS3FU3MZ;
 				INFOPLIST_FILE = P2P/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +524,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tywin.app.P2P;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e85ef0c-dc75-41ba-95b1-45fbf9d0dacb";
+				PROVISIONING_PROFILE_SPECIFIER = ailidemo_all;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

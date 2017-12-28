@@ -1,3 +1,6 @@
 target 'P2P' do
   pod "YTKNetwork"
+  pod "Ono"
+  pod 'MJExtension'
+  pod "UITableView+FDTemplateLayoutCell"
 end

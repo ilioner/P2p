@@ -8,17 +8,32 @@
 
 #import "ViewController.h"
 #import "JXcore.h"
+#import "PPDispatch.h"
+#import "PPItemCell.h"
+#import <UITableView+FDTemplateLayoutCell.h>
+
+
+
 
 static void callback(NSArray *args, NSString *return_id) { }
 
 @interface ViewController ()
-
+{
+    __weak IBOutlet UISearchBar *_mainSearch;
+    NSMutableArray *itemList;
+    __weak IBOutlet UITableView *_mainTableView;
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"PPItemCell" bundle:nil];
+    [_mainTableView registerNib:nib forCellReuseIdentifier:@"PPItemCell"];
+    
+    /*
     // Do any additional setup after loading the view, typically from a nib.
     // makes JXcore instance running under it's own thread
     [JXcore useSubThreading];
@@ -72,8 +87,59 @@ static void callback(NSArray *args, NSString *return_id) { }
 //    NSArray *params = [NSArray arrayWithObjects:@"app.js", nil];
     NSArray *params = [NSArray arrayWithObjects:@"server.js", nil];
     [JXcore callEventCallback:@"StartApplication" withParams:params];
+     */
 }
 
+- (void)setDataList:(NSMutableArray *)data
+{
+    itemList = data;
+    [_mainTableView reloadData];
+}
+
+
+#pragma mark UITableViewDelegate,UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return itemList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cid = @"PPItemCell";
+    PPItemCell *cell = (PPItemCell *)[tableView dequeueReusableCellWithIdentifier:cid];
+    if (!cell) {
+        cell = (PPItemCell *)([[NSBundle mainBundle] loadNibNamed:@"PPItemCell" owner:nil options:NULL][0]);
+    }
+    [cell setItem:itemList[indexPath.row]];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView fd_heightForCellWithIdentifier:@"PPItemCell" cacheByIndexPath:indexPath configuration:^(PPItemCell *cell) {
+        // 配置 cell 的数据源，和 "cellForRow" 干的事一致，比如：
+        [cell setItem:itemList[indexPath.row]];
+    }];
+}
+
+#pragma mark UISearchBarDelegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *keyword = searchBar.text;
+    if (keyword.length == 0){
+        return;
+    }
+    [PPDispatch dataBy:keyword page:@"1" handle:^(id data, BOOL finish) {
+        if (finish) {
+            [self setDataList:(NSMutableArray *)data];
+        }
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
