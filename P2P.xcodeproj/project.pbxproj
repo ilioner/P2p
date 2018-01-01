@@ -36,6 +36,16 @@
 		9CB51CA81FF23958008AA0DD /* PPDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CA71FF23958008AA0DD /* PPDispatch.m */; };
 		9CB51CAB1FF23978008AA0DD /* PPPageParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CAA1FF23978008AA0DD /* PPPageParse.m */; };
 		9CB51CAE1FF23988008AA0DD /* PPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB51CAD1FF23988008AA0DD /* PPRequest.m */; };
+		9CFB58F21FFA631D00D81D60 /* PPMagentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB58F11FFA631D00D81D60 /* PPMagentRequest.m */; };
+		9CFB58F51FFA65DE00D81D60 /* PPMagent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB58F41FFA65DE00D81D60 /* PPMagent.m */; };
+		9CFB58F81FFA676100D81D60 /* PPItemConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB58F71FFA676100D81D60 /* PPItemConfig.m */; };
+		9CFB58FB1FFA67A000D81D60 /* PPFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB58FA1FFA67A000D81D60 /* PPFile.m */; };
+		9CFB59651FFA72BE00D81D60 /* TBVideoRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB595F1FFA72BE00D81D60 /* TBVideoRequestTask.m */; };
+		9CFB59661FFA72BE00D81D60 /* TBloaderURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB59631FFA72BE00D81D60 /* TBloaderURLConnection.m */; };
+		9CFB59671FFA72BE00D81D60 /* TBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB59641FFA72BE00D81D60 /* TBPlayer.m */; };
+		9CFB596A1FFA731700D81D60 /* PPPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB59691FFA731700D81D60 /* PPPlayerViewController.m */; };
+		9CFB596D1FFA75DB00D81D60 /* XCHudHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB596C1FFA75DB00D81D60 /* XCHudHelper.m */; };
+		9CFB596F1FFA764000D81D60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFB596E1FFA764000D81D60 /* AVFoundation.framework */; };
 		E08B7DD237D6A448B22CAAB5 /* libPods-P2P.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA21F68F5404ABAF4C9CFD2 /* libPods-P2P.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +96,25 @@
 		9CB51CAA1FF23978008AA0DD /* PPPageParse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPageParse.m; sourceTree = "<group>"; };
 		9CB51CAC1FF23988008AA0DD /* PPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRequest.h; sourceTree = "<group>"; };
 		9CB51CAD1FF23988008AA0DD /* PPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPRequest.m; sourceTree = "<group>"; };
+		9CFB58F01FFA631D00D81D60 /* PPMagentRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMagentRequest.h; sourceTree = "<group>"; };
+		9CFB58F11FFA631D00D81D60 /* PPMagentRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMagentRequest.m; sourceTree = "<group>"; };
+		9CFB58F31FFA65DE00D81D60 /* PPMagent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMagent.h; sourceTree = "<group>"; };
+		9CFB58F41FFA65DE00D81D60 /* PPMagent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMagent.m; sourceTree = "<group>"; };
+		9CFB58F61FFA676100D81D60 /* PPItemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPItemConfig.h; sourceTree = "<group>"; };
+		9CFB58F71FFA676100D81D60 /* PPItemConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPItemConfig.m; sourceTree = "<group>"; };
+		9CFB58F91FFA67A000D81D60 /* PPFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPFile.h; sourceTree = "<group>"; };
+		9CFB58FA1FFA67A000D81D60 /* PPFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPFile.m; sourceTree = "<group>"; };
+		9CFB595F1FFA72BE00D81D60 /* TBVideoRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVideoRequestTask.m; sourceTree = "<group>"; };
+		9CFB59601FFA72BE00D81D60 /* TBloaderURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBloaderURLConnection.h; sourceTree = "<group>"; };
+		9CFB59611FFA72BE00D81D60 /* TBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayer.h; sourceTree = "<group>"; };
+		9CFB59621FFA72BE00D81D60 /* TBVideoRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVideoRequestTask.h; sourceTree = "<group>"; };
+		9CFB59631FFA72BE00D81D60 /* TBloaderURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBloaderURLConnection.m; sourceTree = "<group>"; };
+		9CFB59641FFA72BE00D81D60 /* TBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayer.m; sourceTree = "<group>"; };
+		9CFB59681FFA731700D81D60 /* PPPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPPlayerViewController.h; sourceTree = "<group>"; };
+		9CFB59691FFA731700D81D60 /* PPPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPlayerViewController.m; sourceTree = "<group>"; };
+		9CFB596B1FFA75DA00D81D60 /* XCHudHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHudHelper.h; sourceTree = "<group>"; };
+		9CFB596C1FFA75DB00D81D60 /* XCHudHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHudHelper.m; sourceTree = "<group>"; };
+		9CFB596E1FFA764000D81D60 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FDA21F68F5404ABAF4C9CFD2 /* libPods-P2P.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-P2P.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFB596F1FFA764000D81D60 /* AVFoundation.framework in Frameworks */,
 				9CB51CA41FF2272E008AA0DD /* libstdc++.6.0.9.tbd in Frameworks */,
 				9CB51C9E1FF2269F008AA0DD /* libuv.a in Frameworks */,
 				9CB51C9F1FF2269F008AA0DD /* libleveldb.a in Frameworks */,
@@ -116,6 +146,7 @@
 		43B7A9FD2B05DB97795B5071 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CFB596E1FFA764000D81D60 /* AVFoundation.framework */,
 				9CB51CA31FF2272E008AA0DD /* libstdc++.6.0.9.tbd */,
 				FDA21F68F5404ABAF4C9CFD2 /* libPods-P2P.a */,
 			);
@@ -138,6 +169,12 @@
 				9C5E2CC91FF4C4DC00D76C71 /* PPDetailMediaItem.m */,
 				9C07CC391FF38315008DB6F6 /* PPMediaItem.h */,
 				9C07CC3A1FF38315008DB6F6 /* PPMediaItem.m */,
+				9CFB58F31FFA65DE00D81D60 /* PPMagent.h */,
+				9CFB58F41FFA65DE00D81D60 /* PPMagent.m */,
+				9CFB58F61FFA676100D81D60 /* PPItemConfig.h */,
+				9CFB58F71FFA676100D81D60 /* PPItemConfig.m */,
+				9CFB58F91FFA67A000D81D60 /* PPFile.h */,
+				9CFB58FA1FFA67A000D81D60 /* PPFile.m */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -163,6 +200,7 @@
 		9CB51C691FF22335008AA0DD /* P2P */ = {
 			isa = PBXGroup;
 			children = (
+				9CFB595E1FFA72BE00D81D60 /* TBPlayer */,
 				9C07CC381FF38248008DB6F6 /* Dto */,
 				9CB51CA51FF2370F008AA0DD /* Scrapy */,
 				9CB51C861FF2269F008AA0DD /* JXcore */,
@@ -181,6 +219,8 @@
 				9CB51C791FF22335008AA0DD /* main.m */,
 				9C5E2CC31FF4A04200D76C71 /* PPDetailViewController.h */,
 				9C5E2CC41FF4A04200D76C71 /* PPDetailViewController.m */,
+				9CFB59681FFA731700D81D60 /* PPPlayerViewController.h */,
+				9CFB59691FFA731700D81D60 /* PPPlayerViewController.m */,
 			);
 			path = P2P;
 			sourceTree = "<group>";
@@ -226,8 +266,25 @@
 				9CB51CAA1FF23978008AA0DD /* PPPageParse.m */,
 				9CB51CAC1FF23988008AA0DD /* PPRequest.h */,
 				9CB51CAD1FF23988008AA0DD /* PPRequest.m */,
+				9CFB58F01FFA631D00D81D60 /* PPMagentRequest.h */,
+				9CFB58F11FFA631D00D81D60 /* PPMagentRequest.m */,
 			);
 			path = Scrapy;
+			sourceTree = "<group>";
+		};
+		9CFB595E1FFA72BE00D81D60 /* TBPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9CFB596B1FFA75DA00D81D60 /* XCHudHelper.h */,
+				9CFB596C1FFA75DB00D81D60 /* XCHudHelper.m */,
+				9CFB595F1FFA72BE00D81D60 /* TBVideoRequestTask.m */,
+				9CFB59601FFA72BE00D81D60 /* TBloaderURLConnection.h */,
+				9CFB59611FFA72BE00D81D60 /* TBPlayer.h */,
+				9CFB59621FFA72BE00D81D60 /* TBVideoRequestTask.h */,
+				9CFB59631FFA72BE00D81D60 /* TBloaderURLConnection.m */,
+				9CFB59641FFA72BE00D81D60 /* TBPlayer.m */,
+			);
+			path = TBPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,17 +415,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5E2CCB1FF4C4DC00D76C71 /* PPDetailMediaItem.m in Sources */,
+				9CFB58F51FFA65DE00D81D60 /* PPMagent.m in Sources */,
+				9CFB59661FFA72BE00D81D60 /* TBloaderURLConnection.m in Sources */,
+				9CFB596A1FFA731700D81D60 /* PPPlayerViewController.m in Sources */,
 				9CB51C6F1FF22335008AA0DD /* ViewController.m in Sources */,
+				9CFB58FB1FFA67A000D81D60 /* PPFile.m in Sources */,
 				9C07CC3F1FF3957E008DB6F6 /* PPItemCell.m in Sources */,
+				9CFB59651FFA72BE00D81D60 /* TBVideoRequestTask.m in Sources */,
 				9CB51C7A1FF22335008AA0DD /* main.m in Sources */,
 				9CB51C971FF2269F008AA0DD /* JXcore.m in Sources */,
 				9CB51CA81FF23958008AA0DD /* PPDispatch.m in Sources */,
 				9CB51CAB1FF23978008AA0DD /* PPPageParse.m in Sources */,
+				9CFB59671FFA72BE00D81D60 /* TBPlayer.m in Sources */,
 				9CB51C6C1FF22335008AA0DD /* AppDelegate.m in Sources */,
 				9C5E2CC51FF4A04200D76C71 /* PPDetailViewController.m in Sources */,
 				9C5E2CC81FF4BF3A00D76C71 /* PPDetailRequest.m in Sources */,
+				9CFB58F81FFA676100D81D60 /* PPItemConfig.m in Sources */,
+				9CFB58F21FFA631D00D81D60 /* PPMagentRequest.m in Sources */,
 				9CB51CAE1FF23988008AA0DD /* PPRequest.m in Sources */,
 				9C07CC3B1FF38315008DB6F6 /* PPMediaItem.m in Sources */,
+				9CFB596D1FFA75DB00D81D60 /* XCHudHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

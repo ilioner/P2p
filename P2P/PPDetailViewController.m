@@ -9,12 +9,22 @@
 #import "PPDetailViewController.h"
 #import "PPDispatch.h"
 #import "PPDetailMediaItem.h"
+#import "PPMagentRequest.h"
+
+#import "JXcore.h"
+#import "PPMagent.h"
+#import "PPItemConfig.h"
+#import "PPPlayerViewController.h"
 @interface PPDetailViewController ()
 {
     
     __weak IBOutlet UILabel *_infoLabel;
     __weak IBOutlet UITableView *_itemTable;
     PPDetailMediaItem *_detailItem;
+    __weak IBOutlet UIProgressView *_mainProgress;
+    __weak IBOutlet UILabel *_pLabel;
+    PPMagent *_magent;
+    __weak IBOutlet UIButton *_play;
 }
 @end
 
@@ -25,6 +35,14 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = NO;
     [self loadData];
+    _play.hidden = YES;
+    // Define ScreenBrightness method to JS side so we can call it from there (see app.js)
+    [JXcore addNativeBlock:^(NSArray *params, NSString *callbackId) {
+        NSLog(@"====>state chage %@",params);
+//        [self loadData];
+        _magent = [PPMagent mj_objectWithKeyValues:params[0]];
+        [self updateValue];
+    } withName:@"UpdateTorrentState"];
 }
 
 - (void)loadData
@@ -35,6 +53,44 @@
             [self bindData];
         }
     }];
+}
+
+- (IBAction)onStart:(UIButton *)sender {
+//    _detailItem.magent = @"magnet:?xt=urn:btih:64CCA0F2DA143903ACC1C713FE06EC1693E28663";
+    PPMagentRequest *request = [[PPMagentRequest alloc] initWith:_detailItem.magent];
+    [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+
+        NSLog(@"成功--->%@",request.responseString);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"失败--->%@",request.responseString);
+        
+    }];
+}
+
+- (void)updateValue
+{
+    if([_magent.size isEqualToString:@"0"]){
+        return;
+    }
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue,^{
+        CGFloat p = _magent.downloaded.floatValue/_magent.size.floatValue;
+        if (p!=0){
+            _play.hidden = NO;
+        }
+        NSString *progress = [NSString stringWithFormat:@"%.1f%@",p*100,@"%"];
+        _pLabel.text = progress;
+        _mainProgress.progress = p;
+    });
+    
+}
+
+-(IBAction)startPlay
+{
+    PPPlayerViewController *player = [self.storyboard instantiateViewControllerWithIdentifier:@"PPPlayerViewController"];
+    player.url = _magent.videoUrl;
+    [self.navigationController pushViewController:player animated:YES];
 }
 
 - (void)bindData

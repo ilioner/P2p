@@ -20,6 +20,10 @@ function TvApiServer () {
     // Start up API & WebSocket server
     start: function () {
       console.log(`start server at ${Constants.TV_STREAM_SERVER_PORT}`)
+        
+      Mobile('serveron').call(function(br){
+            console.log("serverstart", br);
+      });
 
       _httpServer = http.createServer()
       _httpServer.listen(Constants.TV_STREAM_SERVER_PORT)

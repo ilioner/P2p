@@ -32,11 +32,6 @@ static void callback(NSArray *args, NSString *return_id) { }
     
     UINib *nib = [UINib nibWithNibName:@"PPItemCell" bundle:nil];
     [_mainTableView registerNib:nib forCellReuseIdentifier:@"PPItemCell"];
-    [PPDispatch dataBy:@"归来" page:@"1" handle:^(id data, BOOL finish) {
-        if (finish) {
-            [self setDataList:(NSMutableArray *)data];
-        }
-    }];
     
     // Do any additional setup after loading the view, typically from a nib.
     // makes JXcore instance running under it's own thread
@@ -47,10 +42,9 @@ static void callback(NSArray *args, NSString *return_id) { }
     
     // Define ScreenBrightness method to JS side so we can call it from there (see app.js)
     [JXcore addNativeBlock:^(NSArray *params, NSString *callbackId) {
-        CGFloat br = [[UIScreen mainScreen] brightness];
-        
-        [JXcore callEventCallback:callbackId withJSON:[NSString stringWithFormat:@"%f", (float)br]];
-    } withName:@"ScreenBrightness"];
+        NSLog(@"====>server has start");
+        [self loadData];
+    } withName:@"serveron"];
     
     // Listen to Errors on the JS land
     [JXcore addNativeBlock:^(NSArray *params, NSString *callbackId) {
@@ -98,6 +92,16 @@ static void callback(NSArray *args, NSString *return_id) { }
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)loadData
+{
+    [PPDispatch dataBy:@"归来" page:@"1" handle:^(id data, BOOL finish) {
+        if (finish) {
+            [self setDataList:(NSMutableArray *)data];
+        }
+    }];
+
 }
 
 - (void)setDataList:(NSMutableArray *)data
