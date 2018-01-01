@@ -37,7 +37,7 @@ static void callback(NSArray *args, NSString *return_id) { }
             [self setDataList:(NSMutableArray *)data];
         }
     }];
-    /*
+    
     // Do any additional setup after loading the view, typically from a nib.
     // makes JXcore instance running under it's own thread
     [JXcore useSubThreading];
@@ -89,9 +89,9 @@ static void callback(NSArray *args, NSString *return_id) { }
     } withName:@"SetIPAddress"];
     
 //    NSArray *params = [NSArray arrayWithObjects:@"app.js", nil];
-    NSArray *params = [NSArray arrayWithObjects:@"server.js", nil];
+    NSArray *params = [NSArray arrayWithObjects:@"./js/app.js", nil];
     [JXcore callEventCallback:@"StartApplication" withParams:params];
-     */
+     
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -169,6 +169,5 @@ static void callback(NSArray *args, NSString *return_id) { }
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
